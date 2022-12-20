@@ -5,14 +5,13 @@
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
 const hre = require("hardhat");
+const LZ_ENDPOINTS = require("../constants/layerzeroEndpoints.json");
 
 async function main() {
-  const Lock = await hre.ethers.getContractFactory("PingPong");
-  const lock = await Lock.deploy();
-  await lock.deployed();
-  console.log(
-    `PingPong deployed to ${lock.address}`
-  );
+  const PingPong = await hre.ethers.getContractFactory("PingPong");
+  const pingPong = await PingPong.deploy(LZ_ENDPOINTS[hre.network.name]);
+  await pingPong.deployed();
+  console.log(`PingPong deployed to ${pingPong.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

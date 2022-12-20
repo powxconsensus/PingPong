@@ -1,6 +1,6 @@
-# Sample Hardhat Project
+# Sample PingPong Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+PingPong contract deployed at 0xFd16E48426e22ac5ef9b8d4B6C917eFC5F33e8C6 to Goerli testnet
 
 Try running some of the following tasks:
 
